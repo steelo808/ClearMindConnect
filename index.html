@@ -5,15 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel ="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
     <title>ClearMindConnect | Home </title>
 </head>
 <body>
     
-    <header>
+    <header id="header">
         <div class="container">
         <nav>
             <img alt="Clear Mind Connect Logo" src ="images/Blue White Minimalist Brain Tech Logo.png" id="#logo" width="150px" height="150px"></img>
-            <ul>
+            <button id="toggle-menu">Menu</button>
+            <ul id="menu-items">
                 <li>Home</li>
                 <li>About</li>
                 <li>News/Events</li>
@@ -26,26 +28,36 @@
     <h1 class="hs-item">Clear Mind <span>Connect.</span></h1>
     <p class="hs-item">Unlocking Memories, Empowering Compassion, and Building Bridges.</p>
     <button type="button" class="btn hs-item" id="donate-btn">Donate now</button>
+    <div class="profile-img" id="profile-1"></div>
+    <div class="profile-img" id="profile-2"></div>
+    <div class="profile-img" id="profile-3"></div>
+    <div class="profile-img" id="profile-4"></div>
     </div>
     </div>
     </header>
+    <div class="container">
     <section href="#about" class="about-section">
         <h1>About clear mind connect</h1>
         <p><span>clear mind connect</span> is dedicated to fostering dementia awareness, empathy, and support within communities. Our mission is to provide a compassionate platform that empowers individuals affected by dementia, their caregivers, and the wider community to understand, connect, and navigate the journey with clarity and compassion. Through education, resources, and advocacy, we aim to bridge gaps, reduce stigma, and promote a culture of inclusivity and understanding, ensuring that no one faces dementia alone.</p>
     </section>
+    
     <section href="#news-events" class="news-events-section">
         <h1>News And Events</h1>
     </section>
+
     <section href="#resources" class="resources-section">
         <h1>Resources</h1>
     </section>
+
     <section href="#news-events" class="games-section">
         <h1>Games (Coming Soon...)</h1>
     </section>
     <section href="#Donate" class="donate-section">
         <h1>Donate (Coming Soon...)</h1>
     </section>
+    </div>
     <footer>
+        <div class="container">
         <h1>Clear Mind Connect</h1>
         <div class="quick-links">
             <h4>Quick Links</h4>
@@ -58,8 +70,24 @@
                 <li>Donate(Coming Soon)</li>
             </ul>
         </div>
+        </div>
     </footer>
-    <script src="app.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+    <script>
+    VANTA.FOG({
+  el: "#header",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  highlightColor: 0xffffff,
+  midtoneColor: 0xd797f7,
+  lowlightColor: 0xa432e6,
+  baseColor: 0xffffff
+})
+    </script>
 </body>
 </html>
 
