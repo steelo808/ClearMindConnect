@@ -94,7 +94,7 @@ h1,h2,h3,h4,h5,h6{
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2; /* Ensure the main image is on top */
-    background-image:url("/images/pexels-barbara-olsen-7870237.jpg");
+    background-image:url("/images/IMG_9455.JPG");
     background-position:center;
     background-size:cover;
     
@@ -104,7 +104,7 @@ h1,h2,h3,h4,h5,h6{
 #profile-img-2 {
     top: 25%;
     left: 70%;
-    background-image:url("/images/pexels-stefan-stefancik-91227.jpg");
+    background-image:url("/images/pexels-barbara-olsen-7870237.jpg");
     background-position:center;
     background-size:cover;
 }
