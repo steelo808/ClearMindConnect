@@ -246,17 +246,32 @@ cursor:pointer;
 }
 
 
+.news-data{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:10px;
+}
+
 .news-events-section{
     height:80vh;
 }
 
 .news-events-section h1{
-    font-size:4vw;
     text-align:center;
+    font-size:4vw;
 }
 
-.news-events-section p{
-    text-align:center;
+.news-events-section h2{
+    font-size:3vw;
+}
+
+.news-card .content{
+    background-color:#fff;
+    padding:5px;
+}
+
+.news-card p{
+    font-size:1.3vw;
 }
 
 
