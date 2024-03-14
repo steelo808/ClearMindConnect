@@ -9,6 +9,7 @@
   "author": "Sterling Newsom",
   "license": "ISC",
   "dependencies": {
+    "jquery": "^3.7.1",
     "three": "^0.162.0",
     "vanta": "^0.5.24"
   }
