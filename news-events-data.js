@@ -45,16 +45,16 @@ console.log("working");
 
 // })
 
-var url = 'https://newsapi.org/v2/everything?' +
+var $url = 'https://newsapi.org/v2/everything?' +
           'q=alzheimers&' +
           'from=2024-02-14&' +
           'sortBy=popularity&' +
           'PageSize=3&' +
           'apiKey=c05688524a534b2786c1f41c1f2d7fa5';
 
-var req = new Request(url);
+const $req = new Request($url);
 
-fetch(req)
+fetch($req)
     .then(function(response) {
         return response.json();
     })
@@ -64,3 +64,16 @@ fetch(req)
     .catch(function(error) {
         console.error(error)
     })
+
+
+const $createUi = (data) =>{
+    const $newsCard = $(".news-card");
+
+   data.articles[0].forEach(article =>{
+    const $img = $(`<img src="${data[i].articles[0].urlToImage}" alt="news image">`)
+    $newsCard.append($img);
+   })
+}
+
+
+$createUi();
