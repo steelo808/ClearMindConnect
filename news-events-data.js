@@ -46,16 +46,17 @@ console.log("working");
 // })
 
 var url = 'https://newsapi.org/v2/everything?' +
-          'q=Apple&' +
-          'from=2024-03-14&' +
+          'q=alzheimers&' +
+          'from=2024-02-14&' +
           'sortBy=popularity&' +
+          'PageSize=3&' +
           'apiKey=c05688524a534b2786c1f41c1f2d7fa5';
 
 var req = new Request(url);
 
 fetch(req)
     .then(function(response) {
-        console.log(response.json());
+        return response.json();
     })
     .then(function(data){
         console.log(data)
