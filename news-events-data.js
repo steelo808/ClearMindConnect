@@ -2,7 +2,6 @@ console.log("working");
 
 // const $apiUrl = "https://newsapi.org/v2/everything";
 
-
 // const $params = {
 //     q: 'alzheimers',
 //     from:"2024-02-10",
@@ -17,13 +16,13 @@ console.log("working");
 //     console.log(data)
 //     })
 
-    // for(let i = 0; i < data.length; i++){
-    //     const $news = data.articles;
-    //     const $newsCard = $(".news-card");
-    //     const $content = $(".content");
-    //     // const $img = $(`<img src=`)
+// for(let i = 0; i < data.length; i++){
+//     const $news = data.articles;
+//     const $newsCard = $(".news-card");
+//     const $content = $(".content");
+//     // const $img = $(`<img src=`)
 
-    // }
+// }
 
 // $.ajax({
 //     url:"https://newsapi.org/v2/everything",
@@ -42,38 +41,24 @@ console.log("working");
 //         console.error(error)
 //     }
 
-
 // })
 
-var $url = 'https://newsapi.org/v2/everything?' +
-          'q=alzheimers&' +
-          'from=2024-02-14&' +
-          'sortBy=popularity&' +
-          'PageSize=3&' +
-          'apiKey=c05688524a534b2786c1f41c1f2d7fa5';
+fetch(
+  "https://newsapi.org/v2/everything?q=alzheimers&from=2024-03-01&sortBy=popularity&apiKey=c05688524a534b2786c1f41c1f2d7fa5&PageSize=3"
+)
+  .then((res) => {
+    if (!res.ok) {
+      throw new Error("could not fetch data");
+    }
+    return res.json();
+  })
+  .then((data) => {
+    const newsCard = document.querySelector(".news-card");
 
-const $req = new Request($url);
-
-fetch($req)
-    .then(function(response) {
-        return response.json();
+    data.forEach(item =>{
+      
     })
-    .then(function(data){
-        console.log(data)
-    })
-    .catch(function(error) {
-        console.error(error)
-    })
-
-
-const $createUi = (data) =>{
-    const $newsCard = $(".news-card");
-
-   data.articles[0].forEach(article =>{
-    const $img = $(`<img src="${data[i].articles[0].urlToImage}" alt="news image">`)
-    $newsCard.append($img);
-   })
-}
-
-
-$createUi();
+  })
+  .catch((error) => {
+    console.error(error);
+  });
