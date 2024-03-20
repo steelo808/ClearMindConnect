@@ -53,12 +53,45 @@ fetch(
     return res.json();
   })
   .then((data) => {
-    const newsCard = document.querySelector(".news-card");
 
-    data.forEach(item =>{
+
+
+    const articles = data.articles;
+    
+    for(let i = 0; i < articles.length; i++){
+      console.log(articles);
+     //Creating the UI
+    const newsCard = document.createElement("div");
+      const img = document.createElement('img');
+    const content = document.createElement('div');
+      const date = document.createElement("h5");
+      const headliner = document.createElement('h2');
+      const info = document.createElement('p');
+      const btn = document.createElement('button');
+
+      // setting classes
+      newsCard.classList.add('new-card');
+      content.classList.add('content');
+      btn.classList.add('btn');
+    
       
-    })
+
+      // TESTING
+      console.log(articles[i].urlToImage);
+      console.log(articles[i].author);
+      console.log(articles[i].description);
+      console.log(articles[i].title);
+      console.log(articles[i].content);
+      console.log(articles[i].publishedAt);
+
+      // APPENDING
+      newsCard.append(img,content);
+      content.append(date, headliner, info, btn)
+
+    }
   })
   .catch((error) => {
     console.error(error);
   });
+
+
