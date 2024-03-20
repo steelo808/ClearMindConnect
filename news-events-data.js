@@ -57,17 +57,31 @@ fetch(
 
 
     const articles = data.articles;
+
+    const newsWrapper = document.querySelector(".news-events-section")
+    newsWrapper.classList.add('.news-events-section')
     
     for(let i = 0; i < articles.length; i++){
       console.log(articles);
      //Creating the UI
-    const newsCard = document.createElement("div");
+    const newsCard = document.createElement("div"); //newsWrapper
+
       const img = document.createElement('img');
-    const content = document.createElement('div');
+      img.src = articles[i].urlToImage;
+
+    const content = document.createElement('div'); //content wrapper
+
       const date = document.createElement("h5");
+      date.innerText = new Date(articles[i].publishedAt).toLocaleDateString('en-gb');
+
       const headliner = document.createElement('h2');
-      const info = document.createElement('p');
+      headliner.innerText = articles[i].title;
+
+      const description = document.createElement('p');
+      description.innerText = articles[i].description;
+
       const btn = document.createElement('button');
+      btn.innerText = 'Read More'
 
       // setting classes
       newsCard.classList.add('new-card');
@@ -78,15 +92,16 @@ fetch(
 
       // TESTING
       console.log(articles[i].urlToImage);
-      console.log(articles[i].author);
+      // console.log(articles[i].author);
       console.log(articles[i].description);
       console.log(articles[i].title);
       console.log(articles[i].content);
       console.log(articles[i].publishedAt);
 
       // APPENDING
-      newsCard.append(img,content);
-      content.append(date, headliner, info, btn)
+      newsWrapper.append(newsCard, content)
+      newsCard.append(img);
+      content.append(date, headliner, description, btn)
 
     }
   })
