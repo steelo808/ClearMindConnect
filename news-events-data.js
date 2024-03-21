@@ -57,38 +57,36 @@ fetch(
 
 
     const articles = data.articles;
+    const gridContainer = document.querySelector('.grid-container');
 
-    const newsWrapper = document.querySelector(".news-events-section")
-    newsWrapper.classList.add('.news-events-section')
-    
     for(let i = 0; i < articles.length; i++){
-      console.log(articles);
-     //Creating the UI
-    const newsCard = document.createElement("div"); //newsWrapper
+        const newsCard = document.createElement("div");
+        newsCard.classList.add('news-card')
 
-      const img = document.createElement('img');
-      img.src = articles[i].urlToImage;
+          const img = document.createElement("img")
+          img.src = articles[i].urlToImage;
+          img.classList.add('news-img')
 
-    const content = document.createElement('div'); //content wrapper
+          const date = document.createElement("h4");
+          date.textContent = new Date(articles[i].publishedAt).toLocaleDateString('en-US');
+          date.classList.add('news-date');
 
-      const date = document.createElement("h5");
-      date.innerText = new Date(articles[i].publishedAt).toLocaleDateString('en-gb');
 
-      const headliner = document.createElement('h2');
-      headliner.innerText = articles[i].title;
+          const headliner = document.createElement("h3");
+          headliner.textContent = articles[i].title;
+          headliner.classList.add('news-headliner')
 
-      const description = document.createElement('p');
-      description.innerText = articles[i].description;
+          const content = document.createElement("p");
+          content.textContent = articles[i].content;
+          content.classList.add('news-content')
 
-      const btn = document.createElement('button');
-      btn.innerText = 'Read More'
+          const btn = document.createElement("button");
+          btn.textContent = "Read More";
 
-      // setting classes
-      newsCard.classList.add('new-card');
-      content.classList.add('content');
-      btn.classList.add('btn');
+
+      gridContainer.appendChild(newsCard);
+      newsCard.append(img, date, headliner, content, btn)
     
-      
 
       // TESTING
       console.log(articles[i].urlToImage);
@@ -97,11 +95,6 @@ fetch(
       console.log(articles[i].title);
       console.log(articles[i].content);
       console.log(articles[i].publishedAt);
-
-      // APPENDING
-      newsWrapper.append(newsCard, content)
-      newsCard.append(img);
-      content.append(date, headliner, description, btn)
 
     }
   })
