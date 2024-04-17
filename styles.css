@@ -17,6 +17,7 @@ li{
 
 a{
     text-decoration:none;
+    color:inherit;
 }
 
 .container{
@@ -107,7 +108,7 @@ h1,h2,h3,h4,h5,h6{
 #profile-img-2 {
     top: 25%;
     left: 70%;
-    background-image:url("/images/pexels-barbara-olsen-7870237.jpg");
+    background-image:url("/images/tinified/pexels-barbara-olsen-7870237.jpg");
     background-position:center;
     background-size:cover;
 }
@@ -115,7 +116,7 @@ h1,h2,h3,h4,h5,h6{
 #profile-img-3 {
     top: 5%;
     left: 45%;
-    background-image:url("/images/pexels-kindel-media-7935689.jpg");
+    background-image:url("/images/tinified/pexels-kindel-media-7935689.jpg");
     background-position:center;
     background-size:cover;
 }
@@ -123,7 +124,7 @@ h1,h2,h3,h4,h5,h6{
 #profile-img-4 {
     top: 10%;
     left: 15%;
-    background-image:url("/images/pexels-yan-krukau-6816031.jpg");
+    background-image:url("/images/tinified/pexels-yan-krukau-6816031.jpg");
     background-position:center;
     background-size:cover;
 }
@@ -131,7 +132,7 @@ h1,h2,h3,h4,h5,h6{
 #profile-img-5 {
     top: 50%;
     left: 10%;
-    background-image:url("/images/pexels-rdne-stock-project-5637731.jpg");
+    background-image:url("/images/tinified/pexels-rdne-stock-project-5637731.jpg");
     background-position:center;
     background-size:cover;
 }
@@ -139,7 +140,7 @@ h1,h2,h3,h4,h5,h6{
 #profile-img-6 {
     top: 75%;
     left: 20%;
-    background-image:url("/images/pexels-helena-lopes-1861594.jpg");
+    background-image:url("/images/tinified/pexels-helena-lopes-1861594.jpg");
     background-position:center;
     background-size:cover;
 }
@@ -147,7 +148,7 @@ h1,h2,h3,h4,h5,h6{
 #profile-img-7 {
     top: 60%;
     left: 60%;
-    background-image:url("/images/pexels-daniel-xavier-1239291.jpg");
+    background-image:url("/images/tinified/pexels-daniel-xavier-1239291.jpg");
     background-position:center;
     background-size:cover;
 }
@@ -292,6 +293,8 @@ cursor:pointer;
 .news-content{
     padding:0 5px;
 }
+
+
 
 .resources-section{
     height:70vh;

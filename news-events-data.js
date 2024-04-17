@@ -44,7 +44,7 @@ console.log("working");
 // })
 
 fetch(
-  "https://newsapi.org/v2/everything?q=alzheimers&from=2024-03-01&sortBy=popularity&apiKey=c05688524a534b2786c1f41c1f2d7fa5&PageSize=3"
+  "https://newsapi.org/v2/everything?q=alzheimers&from=2024-04-01&sortBy=popularity&apiKey=c05688524a534b2786c1f41c1f2d7fa5&PageSize=3"
 )
   .then((res) => {
     if (!res.ok) {
@@ -52,10 +52,8 @@ fetch(
     }
     return res.json();
   })
+
   .then((data) => {
-
-
-
     const articles = data.articles;
     const gridContainer = document.querySelector('.grid-container');
 
