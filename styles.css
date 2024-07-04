@@ -227,7 +227,7 @@ cursor:pointer;
 .about-section{
     display:grid;
     grid-template-columns: 50% 50%;
-    height:60vh;
+    height:auto;
 }
 
 .about-section h1{
@@ -254,7 +254,7 @@ cursor:pointer;
 
 
 .news-events-section{
-    height:100vh;
+    height:auto;
 }
 
 .news-events-section h1{
@@ -325,7 +325,12 @@ cursor:pointer;
     justify-items: center;
 }
 
-
+/* 
+footer */
+footer{
+    background-color: #332a69;
+    color:#8a2be2;
+}
 
 
 
